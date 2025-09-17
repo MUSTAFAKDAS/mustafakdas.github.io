@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mustafa Akdaş — Yazılım</title>
+  <meta name="description" content="Mustafa Akdaş — yazılım" />
+  <meta property="og:title" content="Mustafa Akdaş — Yazılım" />
+  <meta property="og:description" content="Kişisel sayfa" />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --fg: #eaeaec;
+      --muted: #9aa0a6;
+      --accent: #7dd3fc;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#fafafa; --fg:#111; --muted:#6b7280; --accent:#0ea5e9; }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(125,211,252,0.20), transparent 60%),
+                  radial-gradient(1000px 600px at -10% 110%, rgba(125,211,252,0.15), transparent 60%),
+                  var(--bg);
+      color: var(--fg);
+      font: 400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    main {
+      width: min(780px, 92vw);
+      text-align: center;
+      padding: clamp(28px, 6vw, 64px);
+      border: 1px solid color-mix(in srgb, var(--fg) 16%, transparent);
+      border-radius: 24px;
+      backdrop-filter: blur(6px);
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    h1 {
+      margin: 0 0 6px 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: clamp(28px, 6vw, 56px);
+    }
+    .tagline {
+      font-size: clamp(16px, 2.8vw, 22px);
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .chip {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px dashed color-mix(in srgb, var(--fg) 22%, transparent);
+      color: var(--fg);
+      font-size: 14px;
+      opacity: .9;
+    }
+    footer {
+      margin-top: 28px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="chip">Kişisel Sayfa</span>
+    <h1>MUSTAFA AKDAŞ</h1>
+    <div class="tagline">yhazilim</div>
+    <!-- İstersen aşağıya iletişim linki ekleyebiliriz -->
+    <!-- <p><a href="mailto:ornek@mail.com">E-posta</a> · <a href="https://github.com/mustafakdas">GitHub</a></p> -->
+    <footer>© <span id="y"></span> Mustafa Akdaş</footer>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
